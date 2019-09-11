@@ -3,7 +3,7 @@
 ### build
 
 ```console
-docker build --name opencv:4.1.1 .
+docker build --tag opencv:4.1.1 .
 ```
 
 ### run
