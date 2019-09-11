@@ -2,9 +2,9 @@
 
 - python 3.6.8
 - opencv 4.4.1
-- matplotlib
-- numpy
-- scipy
+- matplotlib >=3.1.1
+- numpy >=1.17.2
+- scipy >=1.3.1
 
 ### build
 
