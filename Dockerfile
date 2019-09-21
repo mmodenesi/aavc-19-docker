@@ -2,13 +2,16 @@
 FROM ubuntu:latest
 ARG OPENCV_VERSION=4.1.1
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+RUN apt-get update && apt-get dist-upgrade -y && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
     wget build-essential cmake unzip pkg-config \
     libjpeg-dev libpng-dev libtiff-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
     libxvidcore-dev libx264-dev \
     libatlas-base-dev gfortran \
-    python3-dev python3-pip
+    python3-dev python3-pip \
+    pandoc texlive-xetex && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install numpy matplotlib jupyterlab scipy
 

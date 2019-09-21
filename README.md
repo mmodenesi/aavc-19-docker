@@ -1,10 +1,11 @@
-## Dockerfile para los labs de AAVC19
+## Dockerfile para el primer lab de AAVC19
 
 - python 3.6.8
 - opencv 4.4.1
 - matplotlib >=3.1.1
 - numpy >=1.17.2
 - scipy >=1.3.1
+- pandoc y texlive (para exportar en formato pdf)
 
 ### build
 
