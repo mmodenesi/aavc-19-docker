@@ -14,6 +14,9 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install numpy matplotlib jupyterlab scipy
+RUN pip3 install torch==1.3.0+cpu torchvision==0.4.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+
 
 WORKDIR /usr/local/sources
 
