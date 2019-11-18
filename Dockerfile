@@ -13,8 +13,9 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     pandoc texlive-xetex && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install numpy matplotlib jupyterlab scipy
+RUN pip3 install numpy matplotlib jupyterlab scipy sklearn tqdm ipywidgets
 RUN pip3 install torch==1.3.0+cpu torchvision==0.4.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+RUN jupyter nbextension enable --py widgetsnbextension
 
 
 
